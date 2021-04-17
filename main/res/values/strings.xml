@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Beginners Kitchen</string>
+
+    <string name="search">"Search"</string>
+    <string name="filter">"Filter"</string>
+    <string name="add_recipe">"Add Recipe"</string>
+    <string name="setting">"Settings"</string>
+
+    <string name="recipe_name_holder">"Recipe_Name"</string>
+    <string name="level_name_holder">"Level"</string>
+    <string name="time_name_holder">"00"</string>
+    <string name="minute">"m"</string>
+
+
+    <string name="filter_and_sort">"Filter and Sort"</string>
+    <string name="filter_meal">"Meal"</string>
+    <string name="filter_type">"Type"</string>
+    <string name="filter_serving_size">"Serving Size"</string>
+    <string name="filter_main_dish">"Main Dish"</string>
+    <string name="filter_difficulty">"Difficulty"</string>
+    <string name="filter_user_rating">"User Rating"</string>
+    <string name="filter_time">"Time"</string>
+    <string name="filter_additional_tags">"Additional Tags to Exclude"</string>
+
+    <string name="recipe_name">"Recipe Name"</string>
+    <string name="difficulty_name">"Difficulty"</string>
+    <string name="time_name">"00"</string>
+    <string name="minutes">"mins"</string>
+    <string name="rating_title">"User Rating"</string>
+    <string name="ingredients_title">"Ingredients"</string>
+    <string name="tags_title">"Tags"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_recipe">RecipeActivity</string>
+
+
+    <string name="random_title">"Random Dish"</string>
+    <string name="random_subtitle">
+        "Fill out any of the fields in order to make the result more accurate to your tastes"
+    </string>
+    <string name="randomize">"Randomize"</string>
+
+    <string name="search_title">"Search"</string>
+    <string name="cancel">"Cancel"</string>
+    
+    <string name="add_recipe_title">"Add a Recipe"</string>
+    <string name="prompt_recipe_name">"Recipe Name:"</string>
+    <string name="take_pic">"Take Photo"</string>
+    <string name="upload_pic">Upload Photo</string>\
+    <string name="prompt_difficulty_level">"Difficulty:"</string>
+    <string name="prompt_recipe_time">"Cook Time:"</string>
+    <string name="prompt_ingredients">"Ingredients:"</string>
+    <string name="add_btn">"Add"</string>
+    <string name="prompt_instructions">"Instructions:"</string>
+    <string name="prompt_tags">"Tags:"</string>
+    <string name="recipe_btn">"Recipe Finished"</string>
+
+    <string-array name="difficulty_array">
+        <item>Beginner</item>
+        <item>Basic</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string-array name="by_five">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+        <item>80</item>
+        <item>85</item>
+        <item>90</item>
+        <item>95</item>
+        <item>100</item>
+        <item>105</item>
+        <item>110</item>
+        <item>115</item>
+        <item>120</item>
+        <item>125</item>
+        <item>130</item>
+        <item>135</item>
+        <item>140</item>
+        <item>145</item>
+        <item>150</item>
+        <item>155</item>
+        <item>160</item>
+        <item>165</item>
+        <item>170</item>
+        <item>175</item>
+        <item>180</item>
+        <item>185</item>
+        <item>190</item>
+        <item>195</item>
+        <item>200</item>
+        <item>205</item>
+        <item>210</item>
+        <item>215</item>
+        <item>220</item>
+        <item>225</item>
+        <item>230</item>
+        <item>235</item>
+        <item>240</item>
+        <item>240+</item>
+    </string-array>
+
+
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+</resources>

@@ -1,0 +1,80 @@
+<resources>
+    <style name="recipe_name_holder_text">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="recipe_widget_bottom_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="filter_and_sort_title">
+        <item name="android:textSize">42sp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="filter_list">
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="recipe_title">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@color/orange</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="recipe_text">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="ingredient_title">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="random_title">
+        <item name="android:textColor">@color/text2_color</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="random_txt">
+        <item name="android:textColor">@color/text2_color</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="photo_buttons">
+        <item name="android:layout_width">175dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="add_btn">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="add_recipe_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+    </style>
+
+
+</resources>

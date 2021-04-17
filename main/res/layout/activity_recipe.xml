@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_orange"
+    tools:context=".RecipeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Need to remember to add an onClick -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/favorite_recipe_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/favorite_vector_drawable"
+                android:layout_alignBottom="@+id/recipe_img_view"
+                android:layout_alignRight="@+id/recipe_img_view"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/orange"
+                />
+
+            <ImageView
+                android:id="@+id/recipe_img_view"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+            <TextView
+                android:id="@+id/recipe_title_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_name"
+                android:layout_below="@+id/recipe_img_view"
+                android:layout_marginBottom="20dp"
+                style="@style/recipe_title"
+                />
+
+            <TextView
+                android:id="@+id/recipe_difficulty_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_name"
+                android:layout_below="@+id/recipe_title_name"
+                android:layout_marginLeft="20dp"
+                style="@style/recipe_text"
+                />
+
+            <TextView
+                android:id="@+id/minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minutes"
+                android:layout_below="@+id/recipe_title_name"
+                android:layout_alignRight="@+id/recipe_title_name"
+                android:layout_marginRight="20dp"
+                style="@style/recipe_text"
+                />
+
+            <TextView
+                android:id="@+id/recipe_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_name"
+                android:layout_below="@+id/recipe_title_name"
+                android:layout_toLeftOf="@+id/minutes"
+                style="@style/recipe_text"
+                />
+
+            <TextView
+                android:id="@+id/recipe_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recipe_difficulty_level"
+                android:layout_alignLeft="@+id/recipe_difficulty_level"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/filter_user_rating"
+                style="@style/recipe_text"
+                />
+
+            <TextView
+                android:id="@+id/recipe_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_title"
+                android:layout_below="@+id/recipe_rating"
+                android:layout_alignLeft="@+id/recipe_rating"
+                style="@style/ingredient_title"
+                />
+
+            <TextView
+                android:id="@+id/ingredients_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_title"
+                android:layout_below="@+id/recipe_ingredients"
+                android:layout_alignLeft="@+id/recipe_ingredients"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                style="@style/recipe_text"
+                />
+
+            <TextView
+                android:id="@+id/recipe_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_instructions"
+                android:layout_below="@+id/ingredients_list"
+                android:layout_alignLeft="@+id/recipe_rating"
+                android:layout_marginTop="20dp"
+                style="@style/ingredient_title"
+                />
+
+            <TextView
+                android:id="@+id/instructions_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_title"
+                android:layout_below="@+id/recipe_instructions"
+                android:layout_alignLeft="@+id/recipe_ingredients"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                style="@style/recipe_text"
+                />
+
+            <TextView
+                android:id="@+id/tag_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tags_title"
+                android:layout_below="@+id/instructions_list"
+                android:layout_alignLeft="@+id/recipe_ingredients"
+                android:layout_marginTop="20dp"
+                style="@style/ingredient_title"
+                />
+
+            <TextView
+                android:id="@+id/tag_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tags_title"
+                android:layout_below="@+id/tag_title"
+                android:layout_alignLeft="@+id/tag_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                style="@style/ingredient_title"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

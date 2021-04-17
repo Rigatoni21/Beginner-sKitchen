@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_orange"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/add_recipe_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_recipe_title"
+            android:textSize="36sp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/recipe_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_recipe_name"
+            app:layout_constraintTop_toBottomOf="@+id/add_recipe_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/add_recipe_text"
+            />
+
+        <EditText
+            android:id="@+id/et_recipe_request"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/recipe_request"
+            app:layout_constraintBaseline_toBaselineOf="@+id/recipe_request"
+            />
+
+
+        <!-- Adding a photo~ -->
+        <Button
+            android:id="@+id/take_pic_btn"
+            style="@style/photo_buttons"
+            android:text="@string/take_pic"
+            app:layout_constraintLeft_toLeftOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_request"
+            />
+
+        <Button
+            android:id="@+id/upload_pic_btn"
+            style="@style/photo_buttons"
+            android:text="@string/upload_pic"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintBaseline_toBaselineOf="@+id/take_pic_btn"
+
+            />
+
+        <!-- Image is then displayed for user to look at...-->
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/take_pic_btn" />
+
+
+        <!-- Prompt user to choose a difficulty level for the recipe-->
+        <TextView
+            android:id="@+id/difficulty_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_difficulty"
+            style="@style/add_recipe_text"
+            app:layout_constraintRight_toRightOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/photo"
+            />
+        <!-- Spinner to help the user pick the recipe difficulty level -->
+        <Spinner
+            android:id="@+id/difficulty_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintTop_toTopOf="@+id/difficulty_request"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintLeft_toLeftOf="@+id/et_recipe_request"
+            />
+
+
+
+        <!-- Prompt user to choose a cook time for the recipe-->
+        <TextView
+            android:id="@+id/time_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_recipe_time"
+            style="@style/add_recipe_text"
+            app:layout_constraintRight_toRightOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/difficulty_request"
+            />
+        <!-- Spinner to help the user set an approximate cook time going by multiple of 5... -->
+        <Spinner
+            android:id="@+id/time_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintTop_toTopOf="@+id/time_request"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintLeft_toLeftOf="@+id/et_recipe_request"
+            />
+
+
+
+
+        <!-- Request user for list of ingredients-->
+        <TextView
+            android:id="@+id/ingredient_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_ingredients"
+            android:layout_marginTop="50dp"
+            style="@style/add_recipe_text"
+            app:layout_constraintRight_toRightOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/time_request"
+            />
+
+        <Button
+            android:id="@+id/ingredient_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            style="@style/add_btn"
+            android:text="@string/add_btn"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ingredient_request"
+            android:onClick="addIngredientClick"
+            />
+
+        <EditText
+            android:id="@+id/ingredient_entered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/ingredient_request"
+            app:layout_constraintRight_toLeftOf="@+id/ingredient_btn"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ingredient_request"
+            />
+
+        <!-- This will be used to display a list of the ingredients that the user input-->
+        <TextView
+            android:id="@+id/list_ingredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/ingredient_btn"
+            app:layout_constraintLeft_toLeftOf="@+id/ingredient_request"
+            app:layout_constraintRight_toRightOf="@+id/ingredient_btn"
+            style="@style/add_recipe_text"
+            />
+
+        <!-- Request user for list of instructions-->
+        <TextView
+            android:id="@+id/instructions_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_instructions"
+            android:layout_marginTop="50dp"
+            style="@style/add_recipe_text"
+            app:layout_constraintRight_toRightOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/list_ingredients"
+            />
+
+        <Button
+            android:id="@+id/instruction_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            style="@style/add_btn"
+            android:text="@string/add_btn"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintBaseline_toBaselineOf="@+id/instructions_request"
+            android:onClick="addInstructionClick"
+            />
+
+        <EditText
+            android:id="@+id/instruction_entered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/ingredient_request"
+            app:layout_constraintRight_toLeftOf="@+id/ingredient_btn"
+            app:layout_constraintBaseline_toBaselineOf="@+id/instructions_request"
+            />
+
+        <!-- This will be used to display a list of the ingredients that the user input-->
+        <TextView
+            android:id="@+id/list_instructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/instructions_request"
+            app:layout_constraintRight_toRightOf="@+id/instruction_btn"
+            app:layout_constraintTop_toBottomOf="@+id/instruction_btn"
+            style="@style/add_recipe_text"
+            />
+
+
+
+        <!-- Request user for list of tags-->
+        <TextView
+            android:id="@+id/tags_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_tags"
+            android:layout_marginTop="50dp"
+            style="@style/add_recipe_text"
+            app:layout_constraintRight_toRightOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/list_instructions"
+            />
+
+        <Button
+            android:id="@+id/tag_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            style="@style/add_btn"
+            android:text="@string/add_btn"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tags_request"
+            android:onClick="addTagClick"
+            />
+
+        <EditText
+            android:id="@+id/tag_entered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/ingredient_request"
+            app:layout_constraintRight_toLeftOf="@+id/ingredient_btn"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tags_request"
+            />
+        <!-- This will be used to display a list of the tags that the user input-->
+        <TextView
+            android:id="@+id/list_tag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/instructions_request"
+            app:layout_constraintRight_toRightOf="@+id/tag_btn"
+            app:layout_constraintTop_toBottomOf="@+id/tag_btn"
+            style="@style/add_recipe_text"
+            />
+
+
+
+        <Button
+            android:id="@+id/recipe_done_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/recipe_btn"
+            android:textSize="24sp"
+            android:background="@drawable/rounded_corners"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="50dp"
+            app:layout_constraintRight_toRightOf="@+id/et_recipe_request"
+            app:layout_constraintLeft_toLeftOf="@+id/recipe_request"
+            app:layout_constraintTop_toBottomOf="@+id/list_tag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="addRecipeClick"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
